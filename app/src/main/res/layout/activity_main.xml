@@ -17,37 +17,37 @@
             android:orientation="horizontal">
 
             <RelativeLayout
-                android:id="@+id/current_month_btn1"
+                android:id="@+id/left_button"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:background="@drawable/custom_back_btn"
+                android:background="@drawable/selected_bg"
                 android:layout_marginEnd="20dp">
 
                 <ImageView
-                    android:id="@+id/current_month_arrow_img"
+                    android:id="@+id/left_image"
                     android:layout_height="20dp"
                     android:layout_width="20dp"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/monthly_back_arrow_white"
+                    android:src="@drawable/back_arrow_right_white"
                     app:tint="@color/white"
                     android:scaleX="-1"/>
 
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/next_month_btn1"
+                android:id="@+id/right_button"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 >
 
                 <ImageView
-                    android:id="@+id/next_month_arrow_img"
+                    android:id="@+id/right_image"
                     android:layout_height="20dp"
                     android:layout_width="20dp"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/tp_current_month_enabled_arrow"
+                    android:src="@drawable/back_arrow_left_white"
                     android:scaleX="-1"
                     app:tint="#979797" />
 

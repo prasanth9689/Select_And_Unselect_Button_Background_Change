@@ -21,71 +21,71 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        binding.currentMonthBtn1.setOnClickListener(v -> {
+        binding.leftButton.setOnClickListener(v -> {
 
             // Primary button enable logic
             final int sdk = android.os.Build.VERSION.SDK_INT;
             if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                binding.currentMonthBtn1.setBackgroundDrawable(ContextCompat.getDrawable(context, R.drawable.tp_month_enabled_bg) );
+                binding.leftButton.setBackgroundDrawable(ContextCompat.getDrawable(context, R.drawable.selected_bg) );
             } else {
-                binding.currentMonthBtn1.setBackground(ContextCompat.getDrawable(context, R.drawable.tp_month_enabled_bg));
+                binding.leftButton.setBackground(ContextCompat.getDrawable(context, R.drawable.selected_bg));
             }
 
             if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                binding.currentMonthArrowImg.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.tp_current_month_enabled_arrow));
-                binding.currentMonthArrowImg.setColorFilter(ContextCompat.getColor(context, R.color.white), android.graphics.PorterDuff.Mode.SRC_IN);
+                binding.leftImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.back_arrow_left_white));
+                binding.leftImage.setColorFilter(ContextCompat.getColor(context, R.color.white), android.graphics.PorterDuff.Mode.SRC_IN);
             } else {
-                binding.currentMonthArrowImg.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.tp_current_month_enabled_arrow));
-                binding.currentMonthArrowImg.setColorFilter(ContextCompat.getColor(context, R.color.white), android.graphics.PorterDuff.Mode.SRC_IN);
+                binding.leftImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.back_arrow_left_white));
+                binding.leftImage.setColorFilter(ContextCompat.getColor(context, R.color.white), android.graphics.PorterDuff.Mode.SRC_IN);
             }
 
             // Secondary button disable logic logic
             if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                binding.nextMonthBtn1.setBackgroundDrawable(null);
+                binding.rightButton.setBackgroundDrawable(null);
             } else {
-                binding.nextMonthBtn1.setBackground(null);
+                binding.rightButton.setBackground(null);
             }
 
             if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                binding.nextMonthArrowImg.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.monthly_back_arrow_white));
-                binding.nextMonthArrowImg.setColorFilter(ContextCompat.getColor(context, R.color.monthly_arrow), android.graphics.PorterDuff.Mode.SRC_IN);
+                binding.rightImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.back_arrow_right_white));
+                binding.rightImage.setColorFilter(ContextCompat.getColor(context, R.color.monthly_arrow), android.graphics.PorterDuff.Mode.SRC_IN);
             } else {
-                binding.nextMonthArrowImg.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.monthly_back_arrow_white));
-                binding.nextMonthArrowImg.setColorFilter(ContextCompat.getColor(context, R.color.monthly_arrow), android.graphics.PorterDuff.Mode.SRC_IN);
+                binding.rightImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.back_arrow_right_white));
+                binding.rightImage.setColorFilter(ContextCompat.getColor(context, R.color.monthly_arrow), android.graphics.PorterDuff.Mode.SRC_IN);
             }
 
-            binding.nextMonthArrowImg.setScaleX(1);
-            binding.currentMonthArrowImg.setScaleX(1);
+            binding.rightImage.setScaleX(1);
+            binding.leftImage.setScaleX(1);
         });
-        binding.nextMonthBtn1.setOnClickListener(v -> {
+        binding.rightButton.setOnClickListener(v -> {
 
             final int sdk = Build.VERSION.SDK_INT;
             if(sdk < Build.VERSION_CODES.JELLY_BEAN) {
-                binding.currentMonthBtn1.setBackgroundDrawable(null);
+                binding.leftButton.setBackgroundDrawable(null);
             } else {
-                binding.currentMonthBtn1.setBackground(null);
+                binding.leftButton.setBackground(null);
             }
 
             if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                binding.nextMonthBtn1.setBackgroundDrawable(ContextCompat.getDrawable(context, R.drawable.tp_month_enabled_bg) );
+                binding.rightButton.setBackgroundDrawable(ContextCompat.getDrawable(context, R.drawable.selected_bg) );
             } else {
-                binding.nextMonthBtn1.setBackground(ContextCompat.getDrawable(context, R.drawable.tp_month_enabled_bg));
+                binding.rightButton.setBackground(ContextCompat.getDrawable(context, R.drawable.selected_bg));
             }
 
             if(sdk < Build.VERSION_CODES.JELLY_BEAN) {
-                binding.nextMonthArrowImg.setColorFilter(ContextCompat.getColor(context, R.color.white), android.graphics.PorterDuff.Mode.SRC_IN);
+                binding.rightImage.setColorFilter(ContextCompat.getColor(context, R.color.white), android.graphics.PorterDuff.Mode.SRC_IN);
             } else {
-                binding.nextMonthArrowImg.setColorFilter(ContextCompat.getColor(context, R.color.white), android.graphics.PorterDuff.Mode.SRC_IN);
+                binding.rightImage.setColorFilter(ContextCompat.getColor(context, R.color.white), android.graphics.PorterDuff.Mode.SRC_IN);
             }
 
             if(sdk < Build.VERSION_CODES.JELLY_BEAN) {
-                binding.currentMonthArrowImg.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.tp_current_month_enabled_arrow));
-                binding.currentMonthArrowImg.setColorFilter(ContextCompat.getColor(context, R.color.monthly_arrow), android.graphics.PorterDuff.Mode.SRC_IN);
-                binding.currentMonthArrowImg.setScaleX(1);
+                binding.leftImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.back_arrow_left_white));
+                binding.leftImage.setColorFilter(ContextCompat.getColor(context, R.color.monthly_arrow), android.graphics.PorterDuff.Mode.SRC_IN);
+                binding.leftImage.setScaleX(1);
             } else {
-                binding.currentMonthArrowImg.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.tp_current_month_enabled_arrow));
-                binding.currentMonthArrowImg.setColorFilter(ContextCompat.getColor(context, R.color.monthly_arrow), android.graphics.PorterDuff.Mode.SRC_IN);
-                binding.currentMonthArrowImg.setScaleX(1);
+                binding.leftImage.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.back_arrow_left_white));
+                binding.leftImage.setColorFilter(ContextCompat.getColor(context, R.color.monthly_arrow), android.graphics.PorterDuff.Mode.SRC_IN);
+                binding.leftImage.setScaleX(1);
             }
         });
     }
